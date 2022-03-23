@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#form{
+    width: 400px;
+    margin: 20px auto ;
+    background-color:white;
+    padding: 30px 35px;
+    border-radius: 10px;
+}
+
+span{
+    font-size: 14px;
+}
+.error-message {
+    color: red;
+    display: none;
+}
+
+.valid-feedback{
+    color: green;
+    display: none;
+}
+
+.enable-validation input:invalid+.error-message {
+    display: block;
+}
+
+
+.enable-validation input:valid~.valid-feedback{
+    display: block;
+}
+
+.enable-validation input:invalid {
+    border: 1px solid red;
+}
+
+.enable-validation input:valid{
+    border: 1px solid green;
+}
+
+.enable-validation:invalid #button[type="submit"] {
+    opacity: 0.6;
+    pointer-events: none;
+}
